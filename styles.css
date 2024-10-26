@@ -1,0 +1,141 @@
+/* Base styling for a romantic theme */
+body {
+    background: linear-gradient(135deg, #ffe6f7, #ffebf0);
+    font-family: 'Georgia', serif;
+    color: #5e1a3c;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 240, 246, 0.92);
+    border: 2px solid #ff99cc;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+    padding: 40px;
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Romantic header and highlighted text styles */
+header h1 {
+    color: #d63384;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+    background-color: #ffe6f0;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+header p,
+section p {
+    font-size: 1.25rem;
+    color: #802649;
+    margin-bottom: 25px;
+    font-style: italic;
+    background-color: #ffedf5;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 8px;
+}
+
+#question h2 {
+    color: #e57373;
+    font-size: 2.2rem;
+    font-family: 'Dancing Script', cursive;
+    background-color: #ffd8e9;
+    padding: 8px 15px;
+    border-radius: 12px;
+}
+
+/* Decorative flourish */
+#message::after, #question::after {
+    content: "❦";
+    display: block;
+    font-size: 2.2rem;
+    color: #ff99cc;
+    margin: 10px auto;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Button styles with romantic highlights */
+button {
+    padding: 12px 30px;
+    margin: 15px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #ff66a3;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff3385;
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+}
+
+/* Romantic footer styling */
+footer p {
+    color: #b30047;
+    margin-top: 30px;
+    font-size: 1rem;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Flash effect */
+.flash {
+    animation: flash 1.5s ease-in-out;
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Form sections smooth appearance */
+.hidden {
+    display: none;
+}
+
+section {
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hidden:not(.flash) {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Romantic form headers */
+#yes-form h2, #no-form h2 {
+    color: #b80073;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    background-color: #ffeff7;
+    padding: 8px 15px;
+    border-radius: 12px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form iframe styling */
+.form-container iframe {
+    border-radius: 10px;
+    border: 1px solid #ff99cc;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+}
